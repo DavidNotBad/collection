@@ -65,6 +65,6 @@ use Illuminate\Database\Eloquent\Model;
 class Common extends Model
 {
     public $timestamps = false;
-    protected $table = '';
     protected $fillable = [];
+//    protected $table = '';
 }

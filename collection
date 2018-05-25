@@ -1,4 +1,16 @@
 #!/usr/bin/env php
 <?php
+require __DIR__.'/vendor/autoload.php';
 
-require './artisan';
+
+function xrange($start, $limit, $step = 1) {
+    for ($i = $start; $i <= $limit; $i += $step) {
+        yield $i;
+    }
+
+}
+
+dd(get_class(xrange(1,10, 2)));
+
+
+

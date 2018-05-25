@@ -13,6 +13,11 @@
 
 Route::get('/', function () {
     dd(
-        (new \App\Collections\Test(new \App\Console\Commands\Test()))
+//        (new \App\Collections\Test(new \App\Console\Commands\Test()))
     );
 });
+
+Route::get('/area', function () {
+    new \App\Collections\Area(new \App\Console\Commands\Area(), new \App\Models\Area());
+});
+
