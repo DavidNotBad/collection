@@ -67,7 +67,6 @@ abstract class Collection
     {
 
         $config = $this->getConfig($config);
-
         $this->client = $this->client($config['timeout']);
 
         $pool = new Pool($this->client, $this->getPoolRequests($urls), $this->getPoolConfig());
@@ -84,7 +83,7 @@ abstract class Collection
         ];
     }
 
-    protected function getListSucc(Response $response, $index, Promise $promise)
+    public function getListSucc(Response $response, $index, Promise $promise)
     {
         throw new \Exception('你需要实现getListSucc方法');
 //        $res = json_decode($response->getBody()->getContents());
@@ -93,7 +92,7 @@ abstract class Collection
 //        $this->info("请求第 $index 个请求，用户 " . $index . " 的 Github ID 为：" .$res->id);
     }
 
-    protected function getListError($reason, $index, Promise $promise)
+    public function getListError($reason, $index, Promise $promise)
     {
         throw new \Exception('你需要实现getListError方法');
 //        $this->command->error("rejected" );

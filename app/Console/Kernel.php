@@ -16,9 +16,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Test::class,
         Area::class,
         MultithreadingRequest::class,
+        Test::class,
     ];
 
     /**
