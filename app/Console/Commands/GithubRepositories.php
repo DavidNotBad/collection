@@ -2,25 +2,21 @@
 
 namespace App\Console\Commands;
 
-/**
- * Class Area
- * @package App\Console\Commands
- */
-class Area extends Command
+class GithubRepositories extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'collection:area';
+    protected $signature = 'collection:github_repositories';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = '采集百度词条的地区信息';
+    protected $description = 'Command description';
 
     /**
      * Create a new command instance.
@@ -39,6 +35,6 @@ class Area extends Command
      */
     public function handle()
     {
-        return $this->collection(\App\Models\Area::class);
+        return $this->collection();
     }
 }

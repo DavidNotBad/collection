@@ -12,11 +12,13 @@
 */
 
 Route::get('/', function () {
-    dd(
-//        (new \App\Collections\Test(new \App\Console\Commands\Test()))
-    );
+    $res = collect([\App\Models\Area::class])->map(function($item){
+        return (is_string($item) && class_exists($item)) ? app($item) : $item;
+    });
+    dd($res->all());
 });
 
+//
 Route::get('/area', function () {
     new \App\Collections\Area(new \App\Console\Commands\Area(), new \App\Models\Area());
 });

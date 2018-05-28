@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
+use Jialeo\LaravelSchemaExtend\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -21,8 +21,9 @@ class CreateAreasTable extends Migration
             $table->unsignedTinyInteger('level')->comment('层级');
 
             $table->engine = 'InnoDB';//存储引擎
+            $table->comment = '全国地区表';
+            $table->autoIncrement = 1;
         });
-
     }
 
     /**

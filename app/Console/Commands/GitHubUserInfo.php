@@ -2,23 +2,21 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-
-class Test extends Command
+class GitHubUserInfo extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'collection:test';
+    protected $signature = 'collection:githubinfo';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = '爬虫采集';
+    protected $description = 'github用户信息采集';
 
     /**
      * Create a new command instance.
@@ -37,6 +35,7 @@ class Test extends Command
      */
     public function handle()
     {
-        new \App\Collections\Test($this);
+        return $this->collection();
     }
+
 }
