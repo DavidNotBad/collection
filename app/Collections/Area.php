@@ -73,7 +73,7 @@ class Area extends Collection
     protected function isFilter($name)
     {
         return in_array($name,[
-            '北京市','天津市','河北省','山西省','内蒙古自治区','辽宁省',
+//            '北京市','天津市','河北省','山西省','内蒙古自治区','辽宁省',
         ]);
     }
 
