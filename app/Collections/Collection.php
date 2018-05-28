@@ -122,6 +122,7 @@ abstract class Collection
         ];
     }
 
+
     /**
      * @param Response $response
      * @param $index
@@ -132,6 +133,7 @@ abstract class Collection
     {
         throw new \Exception('你需要实现getListSucc方法');
     }
+
 
     /**
      * @param $reason
