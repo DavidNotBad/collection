@@ -45,7 +45,7 @@ abstract class Collection
     {
         $config = $this->getConfig($config);
 
-        $html = $this->getHtml($url, ...$config);
+        $html = $this->getHtml($url, ...array_values($config));
         return $this->crawler($html, $url, $config['charset']);
     }
 
