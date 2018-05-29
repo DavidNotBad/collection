@@ -110,7 +110,6 @@ abstract class Collection
     }
 
     /**
-     * @param int $concurrency
      * @return array
      */
     protected function getPoolConfig()

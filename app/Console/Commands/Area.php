@@ -6,6 +6,10 @@ namespace App\Console\Commands;
  * Class Area
  * @package App\Console\Commands
  */
+/**
+ * Class Area
+ * @package App\Console\Commands
+ */
 class Area extends Command
 {
     /**

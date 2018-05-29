@@ -2,25 +2,21 @@
 
 namespace App\Console\Commands;
 
-/**
- * Class GitHubUserInfo
- * @package App\Console\Commands
- */
-class GitHubUserInfo extends Command
+class Page extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'collection:githubinfo';
+    protected $signature = 'collection:page';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'github用户信息采集';
+    protected $description = '采集分页信息';
 
     /**
      * Create a new command instance.
@@ -39,7 +35,12 @@ class GitHubUserInfo extends Command
      */
     public function handle()
     {
-        return $this->collection();
+        try{
+            return $this->collection();
+        }catch (\Exception $e){
+            $this->info('采集结束');
+            $this->info($e->getLine());
+            $this->info($e->getMessage());
+        }
     }
-
 }

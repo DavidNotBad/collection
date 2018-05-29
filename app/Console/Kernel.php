@@ -2,9 +2,11 @@
 
 namespace App\Console;
 
+use App\Console\Commands\Ajax;
 use App\Console\Commands\Area;
 use App\Console\Commands\GithubRepositories;
 use App\Console\Commands\GitHubUserInfo;
+use App\Console\Commands\Page;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -19,6 +21,8 @@ class Kernel extends ConsoleKernel
         Area::class,
         GitHubUserInfo::class,
         GithubRepositories::class,
+        Page::class,
+        Ajax::class,
     ];
 
     /**

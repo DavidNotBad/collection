@@ -2,25 +2,21 @@
 
 namespace App\Console\Commands;
 
-/**
- * Class GitHubUserInfo
- * @package App\Console\Commands
- */
-class GitHubUserInfo extends Command
+class Ajax extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'collection:githubinfo';
+    protected $signature = 'collection:ajax';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'github用户信息采集';
+    protected $description = 'Ajax';
 
     /**
      * Create a new command instance.
@@ -39,7 +35,6 @@ class GitHubUserInfo extends Command
      */
     public function handle()
     {
-        return $this->collection();
+        $this->collection();
     }
-
 }

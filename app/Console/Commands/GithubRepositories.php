@@ -2,6 +2,10 @@
 
 namespace App\Console\Commands;
 
+/**
+ * Class GithubRepositories
+ * @package App\Console\Commands
+ */
 class GithubRepositories extends Command
 {
     /**
@@ -16,7 +20,7 @@ class GithubRepositories extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = '获取GitHub所有的仓库';
 
     /**
      * Create a new command instance.
