@@ -285,6 +285,25 @@ abstract class Collection
         echo $message . PHP_EOL;
     }
 
+    protected function getListCrawler(Response $response)
+    {
+        return $this->crawler($response->getBody()->getContents());
+    }
+
+
+    protected function outerHtml(Crawler $crawler)
+    {
+        return \Closure::bind(function(){
+            if (!$this->nodes) {
+                throw new \InvalidArgumentException('The current node list is empty.');
+            }
+
+            $firstNode = $this->getNode(0);
+            return $firstNode->ownerDocument->saveHTML($firstNode);
+        },$crawler, Crawler::class)();
+    }
+
+
     /**
      * @return mixed
      */

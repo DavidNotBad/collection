@@ -12,14 +12,5 @@
 */
 
 Route::get('/', function () {
-    $res = collect([\App\Models\Area::class])->map(function($item){
-        return (is_string($item) && class_exists($item)) ? app($item) : $item;
-    });
-    dd($res->all());
+    dd('welcome');
 });
-
-//
-Route::get('/area', function () {
-    new \App\Collections\Area(new \App\Console\Commands\Area(), new \App\Models\Area());
-});
-

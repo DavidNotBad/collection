@@ -4,6 +4,9 @@ namespace App\Console;
 
 use App\Console\Commands\Ajax;
 use App\Console\Commands\Area;
+use App\Console\Commands\BaiduCity;
+use App\Console\Commands\BaiduCityDetail;
+use App\Console\Commands\CriminalCase;
 use App\Console\Commands\GithubRepositories;
 use App\Console\Commands\GitHubUserInfo;
 use App\Console\Commands\Page;
@@ -18,11 +21,14 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Area::class,
-        GitHubUserInfo::class,
-        GithubRepositories::class,
-        Page::class,
-        Ajax::class,
+//        Area::class,
+//        GitHubUserInfo::class,
+//        GithubRepositories::class,
+//        Page::class,
+//        Ajax::class,
+//        BaiduCity::class,
+//        BaiduCityDetail::class,
+        CriminalCase::class,
     ];
 
     /**
